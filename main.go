@@ -210,8 +210,6 @@ func main() {
 	var inputFeatures = []float64{sepalL, sepalW, petalL, petalW}
 	dataset, labels := loadIrisDataset()
 	knn := KNN{k: 4}
-	// fmt.Println(knn.fit(inputFeatures, dataset))
-	//fmt.Println(readCSVData("iris.csv")[0][0:4])
 
 	_, class := knn.predict(dataset, labels, knn.fit(inputFeatures, dataset))
 	fmt.Printf("It's probably %s\n", class)
