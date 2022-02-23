@@ -184,19 +184,19 @@ func enterFeatures() (float64, float64, float64, float64) {
 		log.Fatal(err)
 	}
 
-	sepalLengthFloat64, err := strconv.ParseFloat(strings.TrimSuffix(sepalLength, "\n"), 64)
+	sepalLengthFloat64, err := strconv.ParseFloat(strings.TrimSuffix(strings.TrimSuffix(sepalLength, "\n"), "\r"), 64)
 	if err != nil {
 		log.Fatal(err)
 	}
-	sepalWidthFloat64, err := strconv.ParseFloat(strings.TrimSuffix(sepalWidth, "\n"), 64)
+	sepalWidthFloat64, err := strconv.ParseFloat(strings.TrimSuffix(strings.TrimSuffix(sepalWidth, "\n"), "\r"), 64)
 	if err != nil {
 		log.Fatal(err)
 	}
-	petalLengthFloat64, err := strconv.ParseFloat(strings.TrimSuffix(petalLength, "\n"), 64)
+	petalLengthFloat64, err := strconv.ParseFloat(strings.TrimSuffix(strings.TrimSuffix(petalLength, "\n"), "\r"), 64)
 	if err != nil {
 		log.Fatal(err)
 	}
-	petalWidthFloat64, err := strconv.ParseFloat(strings.TrimSuffix(petalWidth, "\n"), 64)
+	petalWidthFloat64, err := strconv.ParseFloat(strings.TrimSuffix(strings.TrimSuffix(petalWidth, "\n"), "\r"), 64)
 	if err != nil {
 		log.Fatal(err)
 	}
